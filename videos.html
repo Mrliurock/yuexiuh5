@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>精彩视频</title>
+		<link rel="shortcut icon" href="./favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<style type="text/css">
+			.videos {
+				width: 100%;
+				max-width: 768px;
+				margin: 0 auto;
+				position: relative;
+			}
+			
+			.videos .bn-title {
+				position: relative;
+				display: -webkit-inline-flex;
+				display: -ms-inline-flexbox;
+				display: inline-flex;
+			}
+			.vd-lists{
+				position: relative;
+				top:.2rem;
+				padding:0 .1rem;
+			}
+			.vd-list{
+				margin-bottom: .1rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="videos">
+			<div class="bn-title">
+				<img src="img/i-05.png" /><span>精彩视频</span>
+			</div>
+			<div class="vd-lists">
+				<div class="vd-list">
+					<video width="100%" webkit-playsinline playsinline controls poster="./img/dt01.jpg">
+						<source src="video/movie.ogg"></source>
+					</video>
+				</div>
+				<div class="vd-list">
+					<video width="100%" webkit-playsinline playsinline controls poster="./img/dt01.jpg">
+						<source src="video/movie.ogg"></source>
+					</video>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

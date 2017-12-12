@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>旅游路线</title>
+		<link rel="shortcut icon" href="./favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<style type="text/css">
+				.line {
+				width: 100%;
+				margin: 0 auto;
+				max-width: 768px;
+				padding: .1rem;
+			}
+			
+			.line>h3 {
+				font-size: .17rem;
+				margin-bottom: .03rem;
+			}
+			
+			.line>p {
+				font-size: .13rem;
+				color: #b0b0b0;
+				margin-bottom: .1rem;
+			}
+			
+			.line>h5 {
+				border-bottom: 1px dotted #bababa;
+			}
+			
+			.line h4 {
+				position: relative;
+				margin-top: .3rem;
+				margin-bottom: .1rem;
+				width: 100%;
+				text-align: center;
+			}
+			
+			.line-dt {
+				width: 100%;
+				position: relative;
+			}
+			/*.line-dt>img:first-of-type{
+				position: absolute;
+				top:0;
+				left: 0;
+				width:100%;
+			}*/
+			
+			.line-dt>img:last-of-type {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+			
+			.l-main {
+				position: relative;
+				padding: .2rem 0;
+			}
+			
+			.l-main>div {
+				width: 80%;
+				margin: 0 auto;
+				position: relative;
+			}
+			
+			.l-main>div img {
+				width: 100%;
+			}
+			
+			.l-main span {
+				position: absolute;
+				font-size: .13rem;
+			}
+			
+			.l-main>span:nth-of-type(1) {
+				top: 9%;
+				left: 9%;
+			}
+			
+			.l-main span:nth-of-type(2) {
+				top: 12%;
+				right: 19%;
+			}
+			
+			.l-main span:nth-of-type(3) {
+				top: 29%;
+				left: 8%;
+			}
+			
+			.l-main span:nth-of-type(4) {
+				top: 51%;
+				right: 46%;
+			}
+			
+			.l-main span:nth-of-type(5) {
+				bottom: 6%;
+				left: 11%;
+			}
+			
+			.l-main>img {
+				position: absolute;
+				width: .4rem;
+				height: .4rem;
+				border: 1px solid #FFFFFF;
+				border-radius: 5px;
+			}
+			
+			.l-main>img:nth-of-type(1) {
+				top: 15%;
+				right: 17%;
+			}
+			
+			.l-main>img:nth-of-type(2) {
+				top: 32%;
+				right: 62%;
+			}
+			
+			.l-main>img:nth-of-type(3) {
+				top: 32%;
+				right: 49%;
+			}
+			
+			.l-main>img:nth-of-type(4) {
+				top: 56%;
+				left: 36%;
+			}
+			
+			.l-main>img:nth-of-type(5) {
+				top: 56%;
+				left: 51%;
+			}
+			
+			.l-main>img:nth-of-type(6) {
+				bottom: 9%;
+				left: 11%;
+				@media only screen and (min-width: 500px) {
+					.l-main>span:nth-of-type(1) {
+						left:12%;
+					}
+				}
+		</style>
+	</head>
+
+	<body>
+		<div class="line">
+			<h3>广州著名古迹游览参观线路</h3>
+			<p>2017-11-23</p>
+			<h5></h5>
+			<h4>参观路线</h4>
+			<div class="line-dt">
+				<img src="img/line1-bg.jpg" />
+				<!--<img src="img/line1-02.png"/>-->
+				<div class="l-main">
+					<div>
+						<img src="img/line2.png" />
+					</div>
+					<span>公园西门</span>
+					<span>广州明城墙</span>
+					<span>球形水塔</span>
+					<span>镇海楼</span>
+					<span>五羊石像</span>
+					<img src="img/limg2-01.png" />
+					<img src="img/limg2-02.png" />
+					<img src="img/limg2-03.png" />
+					<img src="img/limg2-04.png" />
+					<img src="img/limg2-05.png" />
+					<img src="img/limg2-06.png" />
+				</div>
+			</div>
+			<div class="footShare" style="position: relative;top:.2rem">
+				<div class="footimg">
+					<div class="share"><img src="./img/sborder.png">
+						<p>发送给朋友</p>
+					</div>
+					<div class="share"><img src="./img/sborder.png">
+						<p>分享到朋友圈</p>
+					</div>
+				</div>
+				<p style="margin-bottom: .1rem;">©2001-2017 翼然科技版权所有</p>
+			</div>
+			<div id="modal">
+				<img src="./img/share.png" />
+			</div>
+		</div>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('.footimg').click(function() {
+					$('#modal').fadeIn()
+					$('#modal').click(function() {
+						$(this).fadeOut()
+					})
+				})
+			});
+		</script>
+	</body>
+
+</html>

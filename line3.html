@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>旅游路线</title>
+		<link rel="shortcut icon" href="./favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<style type="text/css">
+			.line{
+				width: 100%;
+				margin: 0 auto;
+				max-width: 768px;
+				padding: .1rem;
+			}
+			.line>h3{
+				font-size: .17rem;
+				margin-bottom: .03rem;
+			}
+			.line>p{
+				font-size: .13rem;
+				color: #b0b0b0;
+				margin-bottom: .1rem;
+			}
+			.line>h5{
+				border-bottom: 1px dotted #bababa;
+			}
+			.line h4{
+				position: relative;
+				margin-top: .3rem ;
+				margin-bottom: .1rem;
+				width: 100%;
+				text-align: center;
+			}
+			.line-dt{
+				width: 100%;
+				position: relative;
+			}
+			/*.line-dt>img:first-of-type{
+				position: absolute;
+				top:0;
+				left: 0;
+				width:100%;
+			}*/
+			.line-dt>img:last-of-type{
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+			.l-main{
+				position: relative;
+				padding: .2rem 0;
+			}
+			.l-main>div{
+				width: 80%;
+				margin: 0 auto;
+				position: relative;
+			}
+			.l-main>div img{
+				width: 100%;
+			}
+			.l-main span{
+				position: absolute;
+				font-size: .13rem;
+			}
+			.l-main>span:nth-of-type(1){
+				top:10%;
+				left:11%;
+			}
+			.l-main span:nth-of-type(2){
+				top:7%;
+				right:16%;
+			}
+			.l-main span:nth-of-type(3){
+				top:21%;
+				right:21%;
+			}
+			.l-main span:nth-of-type(4){
+				top:27%;
+				left:10%;
+			}
+			.l-main span:nth-of-type(5){
+				top:45.5%;
+				left:16%;
+			}
+			.l-main span:nth-of-type(6){
+				top:52%;
+				left:59%;
+			}
+			.l-main span:nth-of-type(7){
+				bottom:22%;
+				right:28%;
+			}
+			.l-main span:nth-of-type(8){
+				bottom:5%;
+				left:6%;
+			}
+			
+			.l-main>img{
+				position: absolute;
+				width: .4rem;
+				height: .4rem;
+				border: 1px solid #FFFFFF;
+				border-radius: 5px;
+			}
+			.l-main>img:nth-of-type(1){
+				top:13%;
+				right: 19%;
+			}
+			.l-main>img:nth-of-type(2){
+				top:25%;
+				right: 15%;
+			}
+			.l-main>img:nth-of-type(3){
+				top:31%;
+				left: 31%;
+			}
+			.l-main>img:nth-of-type(4){
+				top:51%;
+				left:5%;
+			}
+			.l-main>img:nth-of-type(5){
+				bottom:18%;
+				right: 8%;
+			}
+			.l-main>img:nth-of-type(6){
+				top:57%;
+				left: 59%;
+			}
+			.l-main>img:nth-of-type(7){
+				bottom:8%;
+				left: 12%;
+			}
+			
+			@media only screen and (min-width: 500px) {
+				.l-main>img:nth-of-type(4){
+					top:49%;
+					left:5%;
+				}
+				.l-main>img:nth-of-type(5){
+					bottom:18%;
+					right:14%;
+				}
+				.l-main span:nth-of-type(8){
+					bottom:4%;
+					left:11%;
+				}
+				.l-main>img:nth-of-type(7){
+					bottom:6%;
+					left:14%;
+				}
+			}	
+		</style>
+	</head>
+	<body>
+		<div class="line">
+			<h3>革命史迹游览参观路线</h3>
+			<p>2017-11-23</p>
+			<h5></h5>
+			<h4>参观路线</h4>
+			<div class="line-dt">
+				<img src="img/line3-bg.jpg"/>
+				<!--<img src="img/line-02.jpg"/>-->
+				<div class="l-main">
+					<div>
+						<img src="img/line3.png"/>
+					</div>
+					<span>公园南门</span>
+					<span>百步梯</span>
+					<span>孙先生读书治事处</span>
+					<span>中山纪念碑</span>
+					<span>伍廷芳墓</span>
+					<span>海员亭</span>
+					<span>光复亭</span>
+					<span>观音山遗址</span>
+					<img src="img/limg3-01.png"/>
+					<img src="img/limg3-02.png"/>
+					<img src="img/mj1.jpg"/>
+					<img src="img/limg3-04.png"/>
+					<img src="img/limg3-05.png"/>
+					<img src="img/limg3-06.png"/>
+					<img src="img/limg3-07.png"/>
+				</div>
+			</div>
+			<div class="footShare" style="position: relative;top:.2rem">
+				<div class="footimg">
+					<div class="share"><img src="./img/sborder.png">
+						<p>发送给朋友</p>
+					</div>
+					<div class="share"><img src="./img/sborder.png">
+						<p>分享到朋友圈</p>
+					</div>
+				</div>
+				<p style="margin-bottom: .1rem;">©2001-2017 翼然科技版权所有</p>
+			</div>
+			<div id="modal">
+				<img src="./img/share.png" />
+			</div>
+		</div>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('.footimg').click(function() {
+					$('#modal').fadeIn()
+					$('#modal').click(function() {
+						$(this).fadeOut()
+					})
+				})
+			});
+		</script>
+	</body>
+</html>

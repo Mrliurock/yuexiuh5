@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>植物科普</title>
+		<link rel="shortcut icon" href="./favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<style type="text/css">
+			.dm-details {
+				padding: .15rem;
+				max-width: 768px;
+				margin: 0 auto;
+				background: #f8f8f8;
+			}
+			
+			.dm-details h3 {
+				font-size: .18rem;
+				margin-bottom: .15rem;
+				font-family: Microsoft YaHei;
+			}
+			
+			.text p {
+				color: #4e4e4e;
+				letter-spacing: 1px;
+				text-indent: 2em;
+			}
+			
+			.dm-details span {
+				color: #b1b1b1;
+				font-size: .15rem;
+			}
+			
+			.dm-details .text {
+				margin-top: .1rem;
+				border-top: 1px solid #d4d4d4;
+				padding-top: .1rem;
+			}
+			
+			.dm-details .text img {
+				max-width: 100%;
+				margin: .1rem 0;
+			}
+			
+			.dm-details .text h4 {
+				width: 4em;
+				font-size: .17rem;
+				color: #059D7F;
+				border-bottom: 2px solid #059D7F;
+				margin-top: .1rem;
+			}
+			
+			.dm-details .text h5 {
+				text-align: center;
+			}
+			
+			.footShare {
+				margin-top: .1rem!important;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<div id="app">
+			<div class="dm-details">
+				<h3>植物科普</h3> <span>2017-11-23</span>
+				<div class="text">
+					<p>越秀公园内植物品种多样，现有乔灌木品种共约120科，453余种。其中乡土植物289种，非乡土植物164种。乔灌木共有317.6７万株。其中乔木以台湾相思、桉树、人心果、多种竹类、阴香、紫荆、凤凰木、蒲桃、大叶紫薇为主；灌木有桂花、杜鹃、红绒球、花叶莨姜、花叶连翘、希美丽等；地被植物有蜘蛛兰、大叶仙茅、金丝马尾、鸭趾草、连翘、蒲草等。在这些植物物种中，有国家二级保护植物桫椤、苏铁蕨等。</p>
+					<h4>常绿植物</h4>
+					<div class="imgtext">
+						<img data-original="./img/imgs/571487b17e77c.jpg" class="lazy">
+						<h5>（大王椰子）</h5></div>
+					<div class="imgtext"><img data-original="./img/imgs/571487d04aafd.jpg" class="lazy">
+						<h5>（红刺漏兜）</h5></div>
+					<div class="imgtext"><img data-original="./img/imgs/571487d2e2b3c.jpg" class="lazy">
+						<h5>（蒲葵）</h5></div>
+					<div class="imgtext"><img data-original="./img/imgs/571487d576a81.jpg" class="lazy">
+						<h5>（榕树）</h5></div>
+					<div class="imgtext"><img data-original="./img/imgs/571487d7a52b0.jpg" class="lazy">
+						<h5>（苏铁）</h5></div>
+					<div class="imgtext"><img data-original="./img/imgs/571487d98a239.jpg" class="lazy">
+						<h5>（鱼尾葵）</h5></div>
+					<div class="imgtext"><img data-original="./img/imgs/571487dc016a2.jpg" class="lazy">
+						<h5>（粘叶豆）</h5></div>
+					
+					<!---->
+				</div>
+				<div class="footShare">
+					<div class="footimg">
+						<div class="share"><img src="./img/sborder.png">
+							<p>发送给朋友</p>
+						</div>
+						<div class="share"><img src="./img/sborder.png">
+							<p>分享到朋友圈</p>
+						</div>
+					</div>
+					<p>©2001-2017 翼然科技版权所有</p>
+				</div>
+			</div>
+			<div id="bigimg" style="position: fixed;top:0;left: 0;z-index: 1000;width: 100%;
+				height: 100vh;line-height:100vh;display: none;text-align: center;background: rgba(0,0,0,.9);">
+				<div class="pinch-zoom">
+					<img src=""/>
+				</div>
+			</div>
+			<div id="modal">
+				<img src="./img/share.png"/>
+			</div>
+		</div>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/lazy.js"></script>
+		<script src="js/pinchzoom.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("img.lazy").lazyload({
+					effect: "fadeIn"
+				});
+				$("img.lazy").click(function(e){
+					var imgurl = e.currentTarget.dataset.original;
+					$("#bigimg img").attr("src",imgurl);
+					$("#bigimg").show();
+					$("#bigimg").click(function(){
+						$(this).fadeOut()
+					})
+				})
+				$("div.pinch-zoom").each(function(){
+					new RTP.PinchZoom($(this),{})
+				})
+				$('.footimg').click(function(){
+					$('#modal').fadeIn()
+					$('#modal').click(function(){
+						$(this).fadeOut()
+					})
+				})
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,255 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: .16rem;
+}
+
+html, body {
+  font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  line-height: normal;
+}
+
+/*去除默认样式*/
+ul,ol,li{list-style:none;}
+/*表格边框合并，边框距零*/
+table{border-collapse:collapse;border-spacing:0;}
+/*继承父元素的字体系列样式*/
+input,select,textarea,button{font-family:inherit;}
+/*清除浮动*/
+.fl{float:left;}
+.fr{float:right;}
+.cf{zoom:1;}
+.cf:after{content:"";display:table;clear:both;overflow:hidden;}
+/*a链接*/
+a{text-decoration:none;color:#000;}
+a:hover{text-decoration:none;}
+/*去除点击高亮效果*/
+a,button,input,select,img,label{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;outline:medium none;}
+input::-moz-focus-inner{border:none;padding:0;}
+select, input{vertical-align:middle;}
+/*去掉苹果的默认UI来渲染按钮*/
+input[type="submit"],input[type="reset"],input[type="button"],button,select{-webkit-appearance:none;}
+/*placeholder文本颜色*/
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{
+color:#ccc;
+}
+input:-moz-placeholder,textarea:-moz-placeholder{
+color:#ccc;
+}
+/*html5标签*/
+header,footer,section,article,aside,nav,figure{display:block;}
+/*长英文字母 数字 换行*/
+p{word-break:break-all;word-wrap:break-word;}
+/*去除默认样式*/
+h1,h2,h3,h4,h5,h6,strong,i,em,address, caption, cite, code, dfn, th, var{font-weight:normal;font-style:normal;}
+fieldset, img{border:none;display:block;}
+/*去除长按a链接弹框*/
+html,body{-webkit-touch-callout:none;}
+/* 设置为100是方便用rem单位计算 */
+@media screen and (max-width: 319px) {
+    html {
+        /*font-size: 85.33333px;*/
+        font-size: 90px;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 359px) {
+    html {
+        //font-size: 85.33333px;
+        font-size: 90px;
+    }
+}
+@media screen and (min-width: 360px) and (max-width: 374px) {
+    html {
+        font-size: 96px;
+    }
+}
+@media screen and (min-width: 375px) and (max-width: 383px) {
+    html {
+        font-size: 100px;
+    }
+}
+@media screen and (min-width: 384px) and (max-width: 399px) {
+    html {
+        font-size: 102.4px;
+    }
+}
+@media screen and (min-width: 400px) and (max-width: 413px) {
+    html {
+        font-size: 106.66667px;
+    }
+}
+@media screen and (min-width: 414px) {
+    html {
+        font-size: 110.4px;
+    }
+}
+@media screen and (min-width: 600px) {
+    html {
+        font-size: 120px;
+    }
+}
+
+
+/*底部分享朋友圈样式*/
+.footShare {
+  width: 75%;
+  margin: 0 auto;
+}
+.footShare > p {
+  text-align: center;
+  font-size: .12rem;
+  margin-top: .16rem;
+  color: #929292;
+}
+.footimg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.share {
+  position: relative;
+  width: 40%;
+}
+.share img {
+  width: 100%;
+}
+.share p {
+  position: absolute;
+  bottom: .03rem;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: .12rem;
+}
+.showm img {
+  width: 2.25rem;
+  float: right;
+}
+@media screen and (min-width: 500px) {
+.share p {
+    font-size: .16rem;
+}
+}
+@media screen and (min-width: 600px) {
+.share p {
+    font-size: .18rem;
+}
+}
+/*分享模态框样式*/
+#modal{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.8);
+	z-index: 2000;
+	display: none;
+}
+#modal img{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 2rem;
+}
+#modal .alert-msg{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border-radius: 5px;
+	width: 2rem;
+	background: #FFFFFF;
+	text-align: center;
+}
+.alert-msg h3{
+	border-bottom: 1px solid #929292;
+	padding: 1em 0;
+}
+.alert-msg p{
+	color: #0bd834;
+	padding: .5em 0;
+}
+/*图片放大*/
+@media screen and (max-width: 768px) {
+	#bigimg img{
+		display: inline-block;vertical-align: middle;max-width: 100%;
+	}
+}
+@media screen and (min-width: 768px) {
+	#bigimg img{
+		position: fixed;top:50%;left: 50%;transform: translate(-50%,-50%);
+	}
+}
+
+/*头部标题*/
+.banner{
+				position: relative;
+			}
+			.banner img{
+				width:100%;	
+			}
+			.bn-title{
+				position: absolute;
+				top:.1rem;
+				left: 0;
+				background: url('../img/jjbg.png') no-repeat center;
+				background-size: 100%;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				padding: .08rem 2em .08rem 1em;
+			}
+			.bn-title img{
+				width: 1em;
+				margin-right: .8em;
+			}
+			.bn-title span{
+				color: #FFFFFF;
+				font-size: .15rem;
+			}
+			
+/*讲解服务边框*/
+.gs-text{
+				padding: 1.5em 1em;
+				border: 1px solid #000000;
+				position: relative;
+				margin-bottom: .5rem;
+			}
+			.gs-text:last-of-type{
+				margin-bottom: 0;
+			}
+			.gs-text p{
+				font-size: .13rem;
+			}
+			.gs-t{
+				width: 1.3rem;
+				height: .3rem;
+				position: absolute;
+				top:-.16rem;
+				left: -5px;
+				z-index: 10;
+				background: url(../img/bk1.png) no-repeat center;
+				background-size: 100%;
+			}
+			
+			.gs-text p{
+				line-height: 1.6em;
+			}
+			.gs-t p{
+				text-align: right;
+				line-height: .3rem;
+				padding-right: 2em;
+				color: #da3330;
+			}

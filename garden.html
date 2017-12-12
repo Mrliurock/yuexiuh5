@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>科普园地</title>
+		<link rel="shortcut icon" href="./favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<script src="./js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.garden {
+				max-width: 768px;
+				margin: 0 auto;
+				min-height: 100vh;
+				background: #f7f7f7;
+			}
+			
+			.g-nav {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-ms-flex-pack: distribute;
+				justify-content: space-around;
+			}
+			
+			.g-nav li {
+				padding: .18rem 0;
+				border-bottom: 3px solid transparent;
+				cursor: pointer;
+				color: #a0a0a0;
+			}
+			
+			.g-nav li.active {
+				border-color: #4f6826;
+				color: #4f6826;
+			}
+			
+			.d-main {
+				background: #fff;
+				width: 100%;
+				margin-top: 1px;
+				display: none;
+			}
+			.d-main.show{
+				display: block;
+			}
+			.d-main>img {
+				width: 100%;
+			}
+			
+			.d-main ul li {
+				padding: .1rem;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				-webkit-box-pack: justify;
+				-ms-flex-pack: justify;
+				justify-content: space-between;
+				border-bottom: 1px solid #e5e5e5;
+				cursor: pointer;
+			}
+			
+			.d-main ul li:last-child {
+				border: 0;
+			}
+			
+			.l-item {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+			}
+			
+			.l-item img {
+				width: 1em;
+				height: 1em;
+				margin-right: .5em;
+			}
+			
+			.d-main ul li img.ricon {
+				width: 1.2em;
+				height: 1.2em;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="app">
+			<div class="garden">
+				<ul class="g-nav">
+					<li class="active">植物科普</li>
+					<li class="">军械介绍</li>
+					<li class="">革命故事</li>
+				</ul>
+				<div class="d-main show">
+					<img src="./img/ddt01.jpg">
+					<ul>
+						<li>
+							<div class="l-item"><img src="./img/licon.png"><span>常绿植物</span></div><img src="./img/ricon.png" class="ricon"></li>
+						<li>
+							<div class="l-item"><img src="./img/licon.png"><span>开花植物</span></div><img src="./img/ricon.png" class="ricon"></li>
+						<!--<li>
+							<div class="l-item"><img src="./img/licon.png"><span>植物三</span></div><img src="./img/ricon.png" class="ricon"></li>
+						<li>
+							<div class="l-item"><img src="./img/licon.png"><span>植物四</span></div><img src="./img/ricon.png" class="ricon"></li>-->
+					</ul>
+				</div>
+				<div class="d-main">
+					<img src="./img/ddt02.jpg">
+					<ul>
+						<li>
+							<div class="l-item"><img src="./img/licon.png"><span>踏趣园军械展区</span></div><img src="./img/ricon.png" class="ricon"></li>
+						<!--<li>
+							<div class="l-item"><img src="./img/licon.png"><span>军械二</span></div><img src="./img/ricon.png" class="ricon"></li>
+						<li>
+							<div class="l-item"><img src="./img/licon.png"><span>军械三</span></div><img src="./img/ricon.png" class="ricon"></li>
+						<li>
+							<div class="l-item"><img src="./img/licon.png"><span>军械四</span></div><img src="./img/ricon.png" class="ricon"></li>-->
+					</ul>
+				</div>
+				<div class="d-main">
+					<img src="./img/ddt03.jpg">
+					<ul>
+						<li>
+							<div class="l-item"><img src="./img/licon.png"><span>越秀山与近现代革命历史（一）</span></div><img src="./img/ricon.png" class="ricon"></li>
+						<li>
+							<div class="l-item"><img src="./img/licon.png"><span>越秀山与近现代革命历史（二）</span></div><img src="./img/ricon.png" class="ricon"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var i = 0
+			$(document).ready(function(){
+				$(".g-nav li").click(function(){
+					i = $(this).index()
+					$(this).addClass('active').siblings().removeClass('active')
+					$(".d-main").eq(i).show().siblings('.d-main').hide()
+				})
+				$(".d-main li").click(function(){
+					if(i==0){
+						if($(this).index()==0)
+						window.location.href="./plant.html"
+						if($(this).index()==1)
+						window.location.href="./plant2.html"
+					}else if(i==1){
+						window.location.href="./junxie.html"	
+					}else{
+						if($(this).index()==0)
+						window.location.href="./story.html"
+						if($(this).index()==1)
+						window.location.href='./story2.html'
+					}
+				})
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>客流量显示</title>
+		<link rel="shortcut icon" href="./favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<style type="text/css">
+			.p-flow{
+				width: 100%;
+				min-height:100vh;
+				margin: 0 auto;
+				max-width: 768px;
+				position: relative;
+				padding-top: .2rem;
+			}
+			.p-flow>img{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top:0;
+			}
+			.pf-head{
+				position: relative;
+				width: 2.2rem;
+				height: .38rem;
+				margin: 0 auto;
+			}
+			.pf-head img{
+				width: 100%;
+				height: .38rem;
+				position: absolute;
+			}
+			.pf-head h5{
+				position: relative;
+				line-height: .38rem;
+				text-align: center;
+				width: 100%;
+				color: #FFFFFF;
+				font-size: .15rem;
+			}
+			.pf-dial{
+				position: relative;
+				width: 60%;
+				margin: 0 auto;
+				margin-top: .5rem;
+			}
+			.pf-dial>img:first-of-type{
+				width: 100%;
+			}
+			.hand{
+				width: 28%;
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+			}
+			
+			.pf-now,.pf-all{
+				position: relative;
+				margin: 0 auto;
+				width: 50%;
+			}
+			.pf-now{
+				margin-top: 1rem;
+				margin-bottom: .3rem;
+			}
+			.pf-now div,.pf-all div{
+				width: 100%;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-justify-content: space-around;
+				justify-content: space-around;
+				border: 1px solid #d2d2d2;
+				padding: .03rem 0;
+			}
+			.p-flow div span,.pf-all div span{
+				padding: .05rem .08rem;
+				background: #57b9f9;
+			}
+			.pf-all div span{
+				background: #ff6d60;
+			}
+			.pf-now p,.pf-all p{
+				width: 100%;
+				text-align: center;
+				margin-top: .2rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="p-flow">
+			<img src="img/kll.jpg"/>
+			<div class="pf-head">
+				<img src="img/pfhead.png"/>
+				<h5>越秀公园客流量统计</h5>
+			</div>
+			<div class="pf-dial">
+				<img src="img/kllb.png"/>
+				<img src="img/hand.png"/ class="hand">
+			</div>
+			<div class="pf-now">
+				<div><span>0</span><span>0</span><span>2</span><span>4</span><span>0</span></div>
+				<p>当前客流人数</p>
+			</div>
+			<div class="pf-all">
+				<div><span>1</span><span>0</span><span>2</span><span>4</span><span>0</span></div>
+				<p>今日累计入园人数</p>
+			</div>
+		</div>
+	</body>
+</html>

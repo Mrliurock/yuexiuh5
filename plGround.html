@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>游乐场地</title>
+		<link rel="shortcut icon" href="./favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css" />
+		<style type="text/css">
+			.yxmj {
+				width: 100%;
+				max-width: 768px;
+				margin: 0 auto;
+				min-height: 100vh;
+				display: -webkit-flex;
+				display: -ms-flexbox;
+				display: flex;
+				flex-direction:column ;
+			}
+			.swiper-container{
+				width: 100%;
+			}
+			.swiper-container .banner>img{
+				width: 100vw;
+				height: 56.25vw;
+				max-width: 768px;
+				max-height: 432px;
+			}
+			.swiper-pagination-bullet{
+				background: #fff;
+				opacity: .8;
+			}
+			.swiper-pagination-bullet-active{
+				background: #fe0907;
+			}
+			.imgt{
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				padding: .05rem;
+				background: rgba(0,0,0,.6);
+				width: 100%;
+			}
+			.imgt p{
+				color: #fff;
+				font-size: .13rem;
+				line-height: .24rem;
+				height: .24rem;
+				text-indent: 1em;
+			}
+			.mjs{
+				width: 100%;
+				position: relative;
+				flex: 1;
+				padding: .15rem;
+			}
+			.mjs>img{
+				position: absolute;
+				top:0;
+				left: 0;
+				width:100%;
+			}
+			.lines{
+				position: relative;				
+			}
+			.ylcd-t{
+				width: 1.4rem;
+				height: .35rem;
+				margin: 0 auto;
+				background: url(img/ylcdkk.png) no-repeat center;
+				background-size: 100%;
+				margin-bottom: .15rem;
+			}
+			.ylcd-t p{
+				text-align: center;
+				line-height: .35rem;
+				font-size: .14rem;
+			}
+			.ylcd-t p span{
+				color: #bd2c1a;
+				font-size: .14rem;
+			}
+			.ylcs{
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-ms-flex-wrap: wrap;
+				-webkit-flex-wrap: wrap;
+				flex-wrap: wrap;
+				-webkit-box-pack: justify;
+				-ms-flex-pack: justify;
+				justify-content: space-between;
+			}
+			.ylcs li{
+				width: 47%;
+				margin-bottom: .1rem;
+			}
+			.ylcs a{
+				display: block;
+				width: 100%;
+			}
+			.ylcs a img{
+				width: 100%;
+				height: 1rem;
+				margin-bottom: .05rem;
+			}
+			.ylcs a span{
+				font-size: .13rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="yxmj">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="banner">
+							<img src="img/mj3.jpg" />
+							<div class="imgt">
+								<p>五羊石像</p>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="banner">
+							<img src="img/mj2.jpg" />
+							<div class="imgt">
+								<p>镇海楼</p>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="banner">
+							<img src="img/mj1.jpg" />
+							<div class="imgt">
+								<p>中山纪念碑</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-pagination" style="text-align: right;"></div>
+			</div>
+			<div class="mjs">
+				<img src="img/linebg.jpg"/ style="height: 100%;">
+				<div class="lines">
+					<div class="ylcd-t">
+						<p><span>游乐</span>场地</p>
+					</div>
+					<ul class="ylcs">
+						<li><a href="plgDetails.html?id=1"><img src="img/imgs/ylc01.JPG"/><span>金印游乐场</span></a></li>
+						<li><a href="plgDetails.html?id=2"><img src="img/imgs/ylc02.JPG"/><span>北秀湖艇部</span></a></li>
+						<li><a href="plgDetails.html?id=3"><img src="img/imgs/ylc03.jpg"/><span>东秀儿童乐园</span></a></li>
+						<li><a href="plgDetails.html?id=4"><img src="img/imgs/ylc04.jpg"/><span>东秀湖艇部</span></a></li>
+						<li><a href="plgDetails.html?id=5"><img src="img/imgs/ylc05.JPG"/><span>北秀游乐园</span></a></li>
+						<li><a href="plgDetails.html?id=6"><img src="img/imgs/ylc06.jpg"/><span>南秀湖艇部</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src="js/swiper.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var mySwiper = new Swiper('.swiper-container', {
+				loop: true,
+				pagination: '.swiper-pagination',
+				autoplay: 3000
+			})
+		</script>
+	</body>
+
+</html>

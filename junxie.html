@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>军械介绍</title>
+		<link rel="shortcut icon" href="./favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<style type="text/css">
+			.dm-details {
+				padding: .15rem;
+				max-width: 768px;
+				margin: 0 auto;
+				background: #f8f8f8;
+			}
+			
+			.dm-details h3 {
+				font-size: .18rem;
+				margin-bottom: .15rem;
+				font-family: Microsoft YaHei;
+			}
+			
+			.text p {
+				color: #4e4e4e;
+				letter-spacing: 1px;
+				text-indent: 2em;
+			}
+			
+			.dm-details span {
+				color: #b1b1b1;
+				font-size: .15rem;
+			}
+			
+			.dm-details .text {
+				margin-top: .1rem;
+				border-top: 1px solid #d4d4d4;
+				padding-top: .1rem;
+			}
+			
+			.dm-details .text img {
+				max-width: 100%;
+				margin: .1rem 0;
+			}
+			
+			.dm-details .text h4 {
+				width: 4em;
+				font-size: .17rem;
+				color: #059D7F;
+				border-bottom: 2px solid #059D7F;
+				margin-top: .1rem;
+			}
+			
+			.dm-details .text h5 {
+				text-align: center;
+			}
+			
+			.footShare {
+				margin-top: .1rem!important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="app">
+			<div class="dm-details">
+				<h3>军械介绍</h3> <span>2017-11-23</span>
+				<div class="text">
+					<p>金印游乐场内的踏趣园军械展区，陈列有飞机、坦克和大炮、机关枪。这是一个很好的爱国主义教育平台。这些由广州军区赠送的军械都很有来头。其中一门山地炮，曾跟随中国人民解放军第四野战军参加过“辽沈”、“平津”、“解放广州”、“挺进大西南”等重要战役。该炮身经百战，为中国人民的解放事业立下了汗马功劳，所以，被命名为“功臣炮”。歼—5甲型战斗机，曾参加过西沙群岛保卫战，并立过战功。T—52型主战坦克，曾参加过对越自卫反击战，并立过战功。</p>
+					<div class="imgtext">
+						<img data-original="./img/imgs/jx1.JPG" class="lazy">
+					</div>
+					<p>主战坦克：主要用于与敌方坦克和其他装甲车辆作战，也可以摧毁反坦克武器、野战工事、歼灭有生力量。</p>
+					<div class="imgtext"><img data-original="./img/imgs/jx2.JPG" class="lazy">
+					</div>
+					<p>歼——5甲型战斗机：歼五是沈阳飞机制造公司生产的亚音速喷气战斗机，是中国制造的第一种喷气式飞机。根据前苏联提供的米格-17Φ喷气歼击飞机为原型进行仿制。该机主要用于昼间截击和空战，也具有一定的攻击能力。其改进型歼五甲，机头装有雷达，用于夜间截击空战。</p>
+					<div class="imgtext"><img data-original="./img/imgs/jx3.JPG" class="lazy">
+					</div>
+					<p>山地炮：是一种炮管短，炮身、轮子可以分解拆卸分别携带的曲射炮，弹道类似于榴弹炮，适用于山地作战中摧毁敌人的阵地、堡垒、火力点。</p>
+					<div class="imgtext"><img data-original="./img/imgs/jx4.JPG" class="lazy">
+					</div>
+					<!---->
+				</div>
+				<div class="footShare">
+					<div class="footimg">
+						<div class="share"><img src="./img/sborder.png">
+							<p>发送给朋友</p>
+						</div>
+						<div class="share"><img src="./img/sborder.png">
+							<p>分享到朋友圈</p>
+						</div>
+					</div>
+					<p>©2001-2017 翼然科技版权所有</p>
+				</div>
+			</div>
+			<div id="bigimg" style="position: fixed;top:0;left: 0;z-index: 1000;width: 100%;
+				height: 100vh;line-height:100vh;display: none;text-align: center;background: rgba(0,0,0,.9);">
+				<div class="pinch-zoom">
+					<img src=""/>
+				</div>
+			</div>
+			<div id="modal">
+				<img src="./img/share.png" />
+			</div>
+		</div>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/lazy.js"></script>
+		<script src="js/pinchzoom.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("img.lazy").lazyload({
+					effect: "fadeIn"
+				});
+				$("img.lazy").click(function(e) {
+					var imgurl = e.currentTarget.dataset.original;
+					$("#bigimg img").attr("src", imgurl);
+					$("#bigimg").show();
+					$("#bigimg").click(function() {
+						$(this).fadeOut()
+					})
+				})
+				$("div.pinch-zoom").each(function() {
+					new RTP.PinchZoom($(this), {})
+				})
+				$('.footimg').click(function() {
+					$('#modal').fadeIn()
+					$('#modal').click(function() {
+						$(this).fadeOut()
+					})
+				})
+			});
+		</script>
+	</body>
+
+</html>

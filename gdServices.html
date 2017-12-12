@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>讲解服务</title>
+		<link rel="shortcut icon" href="./favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<style type="text/css">
+			.gdServices{
+				width: 100%;
+				max-width: 768px;
+				margin: 0 auto;
+				position: relative;
+			}
+			.gs-main{
+				position: relative;
+				top:-.6rem;
+				padding:0 1em;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="gdServices">
+			<div class="banner">
+				<img src="img/bn02.jpg"/>
+				<div class="bn-title">
+					<img src="img/i-02.png"/><span>讲解服务</span>
+				</div>
+			</div>
+			<div class="gs-main">
+				<div class="gs-text">
+					<div class="gs-t">
+						<p>语音导览</p>
+					</div>
+					<p>自助语音导游器免费租赁，借用时需提供身份证或护照并交纳200元押金，登记钱币号码，确认签字后，领取导游器，押金在退还设施经检查无异后返还。</p>
+					<p>语音导览器借组服务及人工讲解服务的介绍</p>
+				</div>
+				<div class="gs-text">
+					<div class="gs-t">
+						<p>人工讲解</p>
+					</div>
+					<p>专职中文（普通话、粤语）讲解服务：100元（10人以内，超过10人的团队需另请讲解员）</p>
+					<p>时 间：9:00至16:00</p>
+					<p>讲解内容：五羊石像、广州古城墙、中山纪念碑等</p>
+					<p>备 注：</p>
+					<p>（1）讲解时间约60分钟；</p>
+					<p>（2）租赁游览观光车需另外付费； </p>
+					<p>（3）外语讲解需提前预约；</p>
+					<p>（4）预约电话：020-83604320</p>
+				</div>
+			</div>
+			<div class="footShare" style="position: relative;top:-.2rem">
+					<div class="footimg">
+						<div class="share"><img src="./img/sborder.png">
+							<p>发送给朋友</p>
+						</div>
+						<div class="share"><img src="./img/sborder.png">
+							<p>分享到朋友圈</p>
+						</div>
+					</div>
+					<p>©2001-2017 翼然科技版权所有</p>
+				</div>
+			</div>
+			<div id="modal">
+				<img src="./img/share.png"/>
+			</div>
+		</div>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('.footimg').click(function(){
+					$('#modal').fadeIn()
+					$('#modal').click(function(){
+						$(this).fadeOut()
+					})
+				})
+			});
+		</script>
+	</body>
+</html>
